@@ -1,0 +1,44 @@
+nav {
+    background: rgba(35, 63, 124, 0.3);
+    width: max-content;
+    display: block;
+    padding: 0.7rem 1.8rem;
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 5px 5px rgba(63, 108, 207, 0.3);
+}
+nav a {
+    background: transparent;
+    padding: 0.9rem;
+    border-radius: 50%;
+    display: flex;
+    color: var(--color-light);
+    font-size: 1.1rem;
+}
+nav a:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+nav a.active {
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+/* ========= media queries (small devices) ========= */
+@media screen and (max-width: 600px) {
+    nav {
+        /* width: var(--container-width-sm); */
+    }
+    nav a {
+        padding: 0.8rem;
+        font-size: .9rem;
+    }
+    nav {
+        gap: .7rem;
+    }
+}

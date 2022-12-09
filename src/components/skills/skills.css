@@ -1,0 +1,51 @@
+.icon svg {
+    font-size: 150px;
+    margin-top: 50px;
+}
+#skills {
+    max-width: 90vw!important;
+    margin-left: auto;
+    margin-right: auto;
+}
+.icon {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    transition: .3s all linear;
+    border: 1px solid transparent;
+    background: var(--color-bg-variant);
+    border-radius: 20px;
+    transform: scale(.8);
+    padding-bottom: 40px;
+}
+.icon:hover {
+    transform: scale(1);
+    border-color: var(--color-primary);
+    background-color: var(--color-bg);
+}
+/* ========= media queries (medium devices) ========= */
+@media screen and (max-width: 1024px) {
+    .icon h1 {
+        font-size: 25px;
+    }
+}
+/* ========= media queries (small devices) ========= */
+@media screen and (max-width: 600px) {
+    .icon svg {
+        font-size: 65px;
+    }
+    .icon h1 {
+        font-size: 13px;
+    }
+    #skills {
+        max-width: 90vw!important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (max-width: 440px) {
+    .icon h1 {
+        display: none;
+    }
+}

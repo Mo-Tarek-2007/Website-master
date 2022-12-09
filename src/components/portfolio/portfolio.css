@@ -1,0 +1,93 @@
+.portfolio__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.portfolio__item-cta {
+    display: flex;
+    gap: 1rem;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.card {
+    
+    position: relative;
+    max-width: 300px;
+    height: 150px;
+    background-color: var(--color-bg-variant);
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    transition: .3s ease-in-out;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+.card:hover {
+    height: 240px;
+    background: transparent;
+    border-color: var(--color-bg-variant);
+    border: 1px solid var(--color-primary);
+}
+.card .imgBx{
+    position: relative;
+    max-width: 270px;
+    height: 260px;
+    top: -70px;
+    z-index: 1;
+}
+.card .imgBx img{
+    max-width: 100%;
+    border-radius: 10px;
+    padding: 12px;
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+}
+.card:hover .imgBx img{
+    background: var(--color-bg);
+    border: 1px solid var(--color-primary);
+}
+.card .content {
+    position: relative;
+    margin-top: -140px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.card:hover .content {
+    visibility: visible;
+    opacity: 1;
+}
+.contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+}
+/* ========= media queries (medium devices) ========= */
+@media screen and (max-width: 1024px) {
+    .portfolio__container {
+        grid-template-columns: 1fr 1fr ;
+        gap: 1.2rem;
+    }
+}
+@media screen and (max-width: 868px) {
+    .portfolio__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+    .card:hover {
+        height: 230px;
+    }
+}
+/* ========= media queries (small devices) ========= */
+@media screen and (max-width: 600px) {
+    .portfolio__container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

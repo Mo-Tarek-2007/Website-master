@@ -1,0 +1,120 @@
+#about {
+    width: 80%!important;
+    margin-left: auto;
+    margin-right: auto;
+}
+img {
+    width: 100%; 
+}
+.about_us {
+    width: 100%;
+    max-width: 98rem;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    border-radius: .8rem;
+    background-color: var(--color-bg-variant);
+    border: 1px solid transparent;
+    transition: .3s;
+}
+.about_us:hover {
+    background-color: var(--color-bg);
+    border-color: var(--color-primary);
+}
+.about_us:hover .about_img {
+    background-color: var(--color-bg);
+    border-color: var(--color-primary);
+}
+.about_img {
+    min-width: 25rem;
+    max-width: 25rem;
+    height: 20rem;
+    transform: translateX(-8rem);
+    position: relative;
+    background-color: var(--color-bg-variant);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    transition: .3s;
+}
+.about_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: .8rem;
+}
+.about_title {
+    color: var(--color-light);
+    margin: 10px 0;
+}
+.about_info {
+    margin-left: -5rem;
+}
+.about_text {
+    margin-bottom: 10px!important;
+}
+/* ========= media queries (medium devices) ========= */
+@media screen and (max-width: 1024px) {
+    .about_us{
+        max-width: 80rem;
+    }
+    .about_img {
+        max-width: 20rem;
+        min-width: 20rem;
+    }
+}
+@media screen and (max-width: 868px) {
+    .about_us{
+        padding: 2.5rem;
+        flex-direction: column;
+    }
+    .about_img {
+        max-width: 100%;
+        min-width: 100%;
+        transform: translate(0, -7rem);
+        margin-bottom: -5rem;
+    }
+    .about_info {
+        margin-left: 0;
+    }
+    .container {
+        padding-top: 50px;
+    }
+}
+/* ========= media queries (small devices) ========= */
+@media screen and (max-width: 600px) {
+    #about h2 {
+        margin-bottom: 7rem!important;
+    }
+    .about_us {
+        padding: 1.5rem;
+    }
+    .about__me {
+        width: 70%;
+        margin: 0 auto 3rem;
+    }
+    .about__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .about__content {
+        text-align: justify;
+    }
+    .about__content p {
+        margin: 1.5rem 0;
+    }
+    .about_img img {
+        height: 50%;
+    }
+    .about_img {
+        height: auto;
+        padding-bottom: 0;
+    }
+    .about_text {
+        font-size: 13px;
+    }
+    #about {
+        width: 95%!important;
+    }
+}

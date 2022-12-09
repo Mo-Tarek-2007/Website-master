@@ -1,0 +1,76 @@
+.service__cards {
+    padding: 50px;   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+.service__card {
+    position: relative;
+    border: 1px solid transparent;
+    text-align: center;
+    transition: var(--transition);
+    height: 250px;
+}
+.service__card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.service__card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+.service__card .face {
+    border-radius: 1rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: .5s;
+}
+.service__card .front {
+    transform: perspective(600px) rotateY(0deg);
+    background-color: var(--color-bg-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+.service__card .back {
+    transform: perspective(600px) rotateY(180deg);
+    border: 1px solid var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+}
+.service__card .back h5 {
+    margin: 10px 0;
+    font-size: 22px;
+}
+.service__icon {
+    color: var(--color-primary);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+.service__card h5 {
+    font-size: 1.5rem;
+}
+.service__card small {
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+
+/* ========= media queries (small devices) ========= */
+@media screen and (max-width: 868px) {
+    .service__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .service__cards {
+        grid-template-columns: 1fr!important;
+        gap: 2rem!important;
+        padding: 20px;
+    }
+}
